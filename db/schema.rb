@@ -10,13 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190413070531) do
+ActiveRecord::Schema.define(version: 20190413085153) do
 
   create_table "posts", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.string   "title",                    null: false
-    t.text     "content",    limit: 65535, null: false
-    t.datetime "created_at",               null: false
-    t.datetime "updated_at",               null: false
+    t.string   "title"
+    t.text     "content",    limit: 65535
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
 end
