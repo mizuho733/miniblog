@@ -1,1 +1,12 @@
-hello world
+<div class="wrapper">
+  <dir class="blog-wrapper">
+    <% @posts.each do |post| %>
+    <p class="blog-wrapper__title">
+      <%= post.title %>
+    </p>
+    <p class="blog-wrapper__content">
+      <%= post.content %>
+    </p>
+    <% end %>
+  </dir>
+</div>
