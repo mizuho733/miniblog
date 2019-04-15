@@ -1,0 +1,44 @@
+.wrapper {
+  .blog-wrapper {
+    border: solid 1px #DDDDDD;
+    width: 500px;
+    margin: 10px auto;
+    padding: 0;
+    .blog-header {
+      display: flex;
+      &__created {
+        background-color: #e57373;
+        height: 50px;
+        width: 50px;
+        &--year {
+          color: #FFFFFF;
+          text-align: center;
+          padding: 3px 0px 1px 0px;
+
+        }
+        &--md {
+          color: #FFFFFF;
+          text-align: center;
+          padding: 1px 0px 3px 0px;
+        }
+      }
+      &__title {
+        height: 50px;
+        line-height: 50px;
+        padding-left: 15px;
+        flex: 1;
+        &--p {
+          font-size: 20px;
+          font-style: oblique;
+          font-style: bold;
+        }
+      }
+    }
+    &__content {
+      &--p {
+        padding: 10px;
+        font-size: 12px;
+      }
+    }
+  }
+}

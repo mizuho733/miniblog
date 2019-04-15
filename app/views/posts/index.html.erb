@@ -1,0 +1,24 @@
+<div class="wrapper">
+  <% @posts.each do |post| %>
+  <dir class="blog-wrapper">
+    <div class="blog-header">
+      <div class="blog-header__created">
+        <p class="blog-header__created--year">
+          <%= post.created_at.strftime("%Y") %>
+        </p>
+        <p class="blog-header__created--md">
+          <%= post.created_at.strftime("%m-%d") %>
+        </p>
+      </div>
+      <div class="blog-header__title">
+        <p class="blog-header__title--p">
+          <%= post.title %>
+        </p>
+      </div>
+    </div>
+    <div class="blog-wrapper__content">
+      <p class="blog-wrapper__content--p"><%= post.content %></p>
+    </div>
+  </dir>
+  <% end %>
+</div>

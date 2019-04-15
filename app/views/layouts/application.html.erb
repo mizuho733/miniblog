@@ -9,6 +9,15 @@
   </head>
 
   <body>
+    <nav>
+      <div class="nav-wrapper">
+        <a href="#" class="brand-logo center">Miniblog</a>
+        <ul id="nav-mobile" class="left show-on-medium-and-up">
+          <li><%= link_to "ホーム", root_path %></li>
+          <li><%= link_to "投稿", new_post_path %></li>
+        </ul>
+      </div>
+    </nav>
     <%= yield %>
   </body>
 </html>
