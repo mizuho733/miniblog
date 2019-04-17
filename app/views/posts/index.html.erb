@@ -17,7 +17,22 @@
       </div>
     </div>
     <div class="blog-wrapper__content">
-      <p class="blog-wrapper__content--p"><%= post.content %></p>
+      <%= simple_format(post.content, class: "blog-wrapper__content--p") %>
+    </div>
+    <div class="blog-footer">
+      <div class="blog-footer__author-name">
+        <p class="blog-footer__author-name--p">投稿者：<%= post.user.name %></p>
+      </div>
+      <% if user_signed_in? && current_user.id == post.user_id %>
+      <div class="blog-footer__btns">
+        <div class="blog-footer__btns--edit-btn">
+          <%= link_to "edit", "/posts/#{post.id}/edit", method: :get, class: "edit-btn-color" %>
+        </div>
+        <div class="blog-footer__btns--delete-btn">
+          <%= link_to "delete", "/posts/#{post.id}", method: :delete, class: "delete-btn-color" %>
+        </div>
+      </div>
+      <% end %>
     </div>
   </dir>
   <% end %>
