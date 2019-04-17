@@ -62,9 +62,12 @@
           width: 50px;
           background-color: #e57373;
           text-align: center;
-          color: #FFFFFF;
           line-height: 30px;
           margin: 10px 4px 10px 0;
+          .edit-btn-color {
+            color: #FFFFFF;
+            text-decoration: none;
+          }
         }
         &--delete-btn {
           order: 0;
@@ -72,9 +75,12 @@
           width: 50px;
           background-color: #e57373;
           text-align: center;
-          color: #FFFFFF;
           line-height: 30px;
           margin: 10px 10px 10px 4px;
+          .delete-btn-color {
+            color: #FFFFFF;
+            text-decoration: none;
+          }
         }
       }
     }
