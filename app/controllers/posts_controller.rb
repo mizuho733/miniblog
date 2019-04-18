@@ -10,7 +10,7 @@ class PostsController < ApplicationController
   def create
     @post = Post.new(post_params)
     if @post.save
-      redirect_to root_path
+      render action: 'create'
     else
       render action: :new
     end
@@ -29,7 +29,7 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
     if @post.user_id == current_user.id
       if @post.update(post_params)
-         redirect_to root_path
+         render action: 'update'
       else
          render action: :edit
       end
