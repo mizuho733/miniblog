@@ -1,4 +1,12 @@
 <div class="form-wrapper">
+  <% if @post.errors.any? %>
+    <p>入力した内容にエラーが<%= @post.errors.count %>件あります</p>
+    <ul>
+      <% @post.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+       <% end %>
+    </ul>
+  <% end %>
   <%= form_for(@post) do |post| %>
     <div class="form-wrapper__title">
       <%= post.label :title %>
