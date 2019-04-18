@@ -11,7 +11,7 @@
   <body>
     <nav>
       <div class="nav-wrapper">
-        <a href="#" class="brand-logo center">Miniblog</a>
+        <%= link_to "Miniblog", root_path, class: 'brand-logo center' %>
         <ul id="nav-mobile" class="left show-on-medium-and-up">
           <li><%= link_to "ホーム", root_path %></li>
           <% if user_signed_in? %>
