@@ -6,10 +6,10 @@
     </div>
     <div class="form-wrapper__content">
       <%= post.label :content %>
-      <%= post.text_area :content %>
+      <%= post.text_area :content, size: "60x10" %>
     </div>
     <div class="form-wrapper__submit-btn">
-      <%= post.submit %>
+      <%= post.submit '投稿する', class: "form-wrapper__submit-btn--color" %>
     </div>
   <% end %>
 </div>

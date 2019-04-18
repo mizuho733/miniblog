@@ -1,0 +1,14 @@
+.form-wrapper {
+  width: 500px;
+  margin: 0 auto;
+  &__submit-btn {
+    &--color {
+    height: 30px;
+    width: 80px;
+    background-color: #e57373;
+    text-align: center;
+    line-height: 30px;
+    color: #FFFFFF;
+    }
+  }
+}
