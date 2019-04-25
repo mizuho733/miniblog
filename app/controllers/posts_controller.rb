@@ -8,7 +8,12 @@ class PostsController < ApplicationController
   end
 
   def create
-    Post.create(post_params)
+    @post = Post.new(post_params)
+    if @post.save
+      render action: 'create'
+    else
+      render action: :new
+    end
   end
 
   def destroy
@@ -21,9 +26,13 @@ class PostsController < ApplicationController
   end
 
   def update
-    post = Post.find(params[:id])
-    if post.user_id == current_user.id
-      post.update(post_params)
+    @post = Post.find(params[:id])
+    if @post.user_id == current_user.id
+      if @post.update(post_params)
+         render action: 'update'
+      else
+         render action: :edit
+      end
     end
   end
 
