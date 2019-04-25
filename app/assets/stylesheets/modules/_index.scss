@@ -31,6 +31,11 @@
           font-size: 20px;
           font-style: oblique;
           font-style: bold;
+          .title-decoration {
+            color: #000;
+            text-decoration: none;
+            display: block;
+          }
         }
       }
     }

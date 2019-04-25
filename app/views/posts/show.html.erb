@@ -1,0 +1,37 @@
+<div class="wrapper">
+  <dir class="blog-wrapper">
+    <div class="blog-header">
+      <div class="blog-header__created">
+        <p class="blog-header__created--year">
+          <%= @post.created_at.strftime("%Y") %>
+        </p>
+        <p class="blog-header__created--md">
+          <%= @post.created_at.strftime("%m-%d") %>
+        </p>
+      </div>
+      <div class="blog-header__title">
+        <p class="blog-header__title--p">
+          <%= @post.title %>
+        </p>
+      </div>
+    </div>
+    <div class="blog-wrapper__content">
+      <%= simple_format(@post.content, class: "blog-wrapper__content--p") %>
+    </div>
+    <div class="blog-footer">
+      <div class="blog-footer__author-name">
+        <p class="blog-footer__author-name--p">投稿者：<%= @post.user.name %></p>
+      </div>
+      <% if user_signed_in? && current_user.id == @post.user_id %>
+      <div class="blog-footer__btns">
+        <div class="blog-footer__btns--edit-btn">
+          <%= link_to "edit", "/posts/#{@post.id}/edit", method: :get, class: "edit-btn-color" %>
+        </div>
+        <div class="blog-footer__btns--delete-btn">
+          <%= link_to "delete", "/posts/#{@post.id}", method: :delete, class: "delete-btn-color" %>
+        </div>
+      </div>
+      <% end %>
+    </div>
+  </dir>
+</div>

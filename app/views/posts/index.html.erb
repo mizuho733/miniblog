@@ -11,9 +11,9 @@
         </p>
       </div>
       <div class="blog-header__title">
-        <p class="blog-header__title--p">
-          <%= post.title %>
-        </p>
+        <div class="blog-header__title--p">
+          <%= link_to "#{post.title}", post_path(post.id), method: :get, class: "title-decoration"%>
+        </div>
       </div>
     </div>
     <div class="blog-wrapper__content">
