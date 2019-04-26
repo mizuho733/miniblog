@@ -1,3 +1,33 @@
+h1 {
+  font-size: 30px;
+  padding-bottom: 3px;
+}
+
+h2 {
+  font-size: 25px;
+  padding-bottom: 3px;
+}
+
+h3 {
+  font-size: 20px;
+  padding-bottom: 3px;
+}
+
+h4 {
+  font-size: 18px;
+  padding-bottom: 3px;
+}
+
+h5 {
+  font-size: 16px;
+  padding-bottom: 3px;
+}
+
+h6 {
+  font-size: 15px;
+  padding-bottom: 3px;
+}
+
 .wrapper {
   .blog-wrapper {
     border: solid 1px #DDDDDD;
@@ -14,7 +44,6 @@
           color: #FFFFFF;
           text-align: center;
           padding: 3px 0px 1px 0px;
-
         }
         &--md {
           color: #FFFFFF;
@@ -41,9 +70,6 @@
     }
     &__content {
       padding: 10px;
-      &--p {
-        font-size: 12px;
-      }
     }
     .blog-footer {
       display: flex;
@@ -90,8 +116,4 @@
       }
     }
   }
-}
-
-.pagination {
-  text-align: center;
 }

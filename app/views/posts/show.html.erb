@@ -1,3 +1,5 @@
+<%= stylesheet_link_tag "_show", :media => "all" %>
+
 <div class="wrapper">
   <dir class="blog-wrapper">
     <div class="blog-header">
@@ -16,7 +18,7 @@
       </div>
     </div>
     <div class="blog-wrapper__content">
-      <%= simple_format(@post.content, class: "blog-wrapper__content--p") %>
+      <%= markdown(@post.content) %>
     </div>
     <div class="blog-footer">
       <div class="blog-footer__author-name">
