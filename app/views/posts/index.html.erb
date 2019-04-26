@@ -17,7 +17,9 @@
       </div>
     </div>
     <div class="blog-wrapper__content">
-      <%= simple_format(post.content, class: "blog-wrapper__content--p") %>
+      <%= truncate(post.content, length: 20) do %>
+        <%= link_to "続きを読む", post_path(post.id), method: :get, class: "continue" %>
+      <% end %>
     </div>
     <div class="blog-footer">
       <div class="blog-footer__author-name">
